@@ -11,33 +11,60 @@
 	</head>
 	<body>
 		<div class="main-container">
-			<div id="origin" class="container">
+			<span class="container">
 				<h4>ตำบลที่อ้างอิง</h4>
-				<input id="origin-lat-degree" type="text" />
-				<input id="origin-lat-minute" type="text" />
-				<input id="origin-lon-degree" type="text" />
-				<input id="origin-lon-minute" type="text" />
-			</div>
-			<div id="grid" class="container">
+				<div>
+					<span>แลตติจูด</span>
+					<span><input id="origin-lat-degree" type="text" /></span>
+					<span>องศา</span>
+					<span><input id="origin-lat-minute" type="text" /></span>
+					<span>ลิปดา</span>
+				</div>
+				<div>
+					<span>ลองจิจูด</span>
+					<span><input id="origin-lon-degree" type="text" /></span>
+					<span>องศา</span>
+					<span><input id="origin-lon-minute" type="text" /></span>
+					<span>ลิปดา</span>
+				</div>
+			</span>
+			<span class="container">
 				<h4>จุด Grid</h4>
-				<input id="grid-lat-degree" type="text" />
-				<input id="grid-lat-minute" type="text" />
-				<input id="grid-lon-degree" type="text" />
-				<input id="grid-lon-minute" type="text" />
-			</div>
+				<div>
+					<span>แลตติจูด</span>
+					<span><input id="grid-lat-degree" type="text" /></span>
+					<span>องศา</span>
+					<span><input id="grid-lat-minute" type="text" /></span>
+					<span>ลิปดา</span>
+				</div>
+				<div>
+					<span>ลองจิจูด</span>
+					<span><input id="grid-lon-degree" type="text" /></span>
+					<span>องศา</span>
+					<span><input id="grid-lon-minute" type="text" /></span>
+					<span>ลิปดา</span>
+				</div>
+			</span>
 		</div>
 		<div class="main-container">
-			<div id="cartician" class="container">
+			<span class="container">
 				<h4>แบริ่ง ระยะ</h4>
-				<input id="bearing" type="text" />
-				<input id="range" type="text" />
-			</div>
-			<div id="position" class="container">
+				<div>
+					<span>แบริ่ง</span>
+					<span><input id="bearing" type="text" /></span>
+				</div>
+				<div>
+					<span>ระยะ</span>
+					<span><input id="range" type="text" /></span>
+					<span>ไมล์</span>
+				</div>
+			</span>
+			<span class="container">
 				<h4>ตำบลที่</h4>
 				<label id="section"></label>
 				<label id="x-axis"></label>
 				<label id="y-axis"></label>
-			</div>
+			</span>
 		</div>
 	</body>
 </html>

@@ -1,8 +1,6 @@
 @media screen and (max-width: 500px) {
 	.main-container {
 		width: 100%;
-		border: 1px solid;
-		background: red;
 	}
 }
 
@@ -11,26 +9,14 @@ body {
 	margin: 0;
 }
 
+h4 {
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
 .main-container {
 	width: 500px;
 	margin: auto;
-	background: yellow;
-}
-
-#origin {
-
-}
-
-#grid {
-
-}
-
-#cartician {
-
-}
-
-#position {
-
 }
 
 .container {
