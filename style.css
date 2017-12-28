@@ -2,12 +2,14 @@
 	.main-container {
 		width: 100%;
 		border: 1px solid;
+		background: red;
 	}
 }
 
 .main-container {
 	width: 500px;
 	margin: auto;
+	background: yellow;
 }
 
 #origin {
