@@ -6,6 +6,11 @@
 	}
 }
 
+body {
+	padding: 0;
+	margin: 0;
+}
+
 .main-container {
 	width: 500px;
 	margin: auto;
