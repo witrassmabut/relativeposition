@@ -1,9 +1,43 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="mobile-web-app-capable" content="yes">
 		<title>Relative Position</title>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	</head>
 	<body>
-		<h1>Hello World!</h1>
+		<div style="width:100%;">
+			<div id="origin" class="container">
+				<h4>ตำบลที่อ้างอิง</h4>
+				<input id="origin-lat-degree" type="number" />
+				<input id="origin-lat-minute" type="number" />
+				<input id="origin-lon-degree" type="number" />
+				<input id="origin-lon-minute" type="number" />
+			</div>
+			<div id="grid" class="container">
+				<h4>จุด Grid</h4>
+				<input id="grid-lat-degree" type="number" />
+				<input id="grid-lat-minute" type="number" />
+				<input id="grid-lon-degree" type="number" />
+				<input id="grid-lon-minute" type="number" />
+			</div>
+		</div>
+		<div style="width:100%;">
+			<div id="cartician" class="container">
+				<h4>แบริ่ง ระยะ</h4>
+				<input id="bearing" type="number" />
+				<input id="range" type="number" />
+			</div>
+			<div id="position" class="container">
+				<h4>ตำบลที่</h4>
+				<label id="section"></label>
+				<label id="x-axis"></label>
+				<label id="y-axis"></label>
+			</div>
+		</div>
 	</body>
 </html>
