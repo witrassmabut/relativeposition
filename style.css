@@ -1,0 +1,31 @@
+@media screen and (max-width: 500px) {
+	.main-container {
+		width: 500px;
+		margin: auto;
+	}
+}
+
+.main-container {
+	width: 100%;
+	border: 1px solid;
+}
+
+#origin {
+
+}
+
+#grid {
+
+}
+
+#cartician {
+
+}
+
+#position {
+
+}
+
+.container {
+
+}
