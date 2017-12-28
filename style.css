@@ -1,13 +1,13 @@
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 500px) {
 	.main-container {
-		width: 500px;
-		margin: auto;
+		width: 100%;
+		border: 1px solid;
 	}
 }
 
 .main-container {
-	width: 100%;
-	border: 1px solid;
+	width: 500px;
+	margin: auto;
 }
 
 #origin {
