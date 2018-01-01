@@ -64,27 +64,35 @@ var calculatePosition = function() {
 
 	if((resultLat - gridLat) > 0 && (resultLon - gridLon) > 0) {
 		$("#sector").html("Sector : " + sector.white);
-		$("x-axis").html("X-Axis : " + (resultLon - gridLon).toString());
-		$("y-axis").html("Y-Axis : " + (resultLat - gridLat).toString());
+		positionX = round2Point(resultLon - gridLon);
+		positionY = round2Point(resultLat - gridLat);
+		$("#x-axis").html("X-Axis : " + positionX.toString());
+		$("#y-axis").html("Y-Axis : " + positionY.toString());
 		console.log(sector.white);
 	} else if((resultLat - gridLat) < 0 && (resultLon - gridLon) > 0) {
 		$("#sector").html("Sector : " + sector.blue);
-		$("x-axis").html("X-Axis : " + (resultLon - gridLon).toString());
-		$("y-axis").html("Y-Axis : " + (gridLat - resultLat).toString());
+		positionX = round2Point(resultLon - gridLon);
+		positionY = round2Point(gridLat - resultLat);
+		$("#x-axis").html("X-Axis : " + positionX.toString());
+		$("#y-axis").html("Y-Axis : " + positionY.toString());
 		console.log(sector.blue);
 	} else if((resultLat - gridLat) < 0 && (resultLon - gridLon) < 0) {
 		$("#sector").html("Sector : " + sector.green);
-		$("x-axis").html("X-Axis : " + (gridLon - resultLon).toString());
-		$("y-axis").html("Y-Axis : " + (gridLat - resultLat).toString());
+		positionX = round2Point(gridLon - resultLon);
+		positionY = round2Point(gridLat - resultLat);
+		$("#x-axis").html("X-Axis : " + positionX.toString());
+		$("#y-axis").html("Y-Axis : " + positionY.toString());
 		console.log(sector.green);
-		console.log(gridLon);
-		console.log(gridLat);
-		console.log((gridLon - resultLon).toString());
-		console.log((gridLat - resultLat).toString());
 	} else {
 		$("#sector").html("Sector : " + sector.red);
-		$("x-axis").html("X-Axis : " + (gridLon - resultLon).toString());
-		$("y-axis").html("Y-Axis : " + (resultLat - gridLat).toString());
+		positionX = round2Point(gridLon - resultLon);
+		positionY = round2Point(resultLat - gridLat);
+		$("#x-axis").html("X-Axis : " + positionX.toString());
+		$("#y-axis").html("Y-Axis : " + positionY.toString());
 		console.log(sector.red);
 	}
+}
+
+var round2Point = function(value) {
+	return Number(Math.round(value+'e2')+'e-2');
 }
