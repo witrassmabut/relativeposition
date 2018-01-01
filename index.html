@@ -8,63 +8,89 @@
 		<title>Relative Position</title>
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="script.js"></script>
 	</head>
 	<body>
 		<div class="main-container">
-			<span class="container">
+			<div class="container">
 				<h4>ตำบลที่อ้างอิง</h4>
-				<div>
-					<span>แลตติจูด</span>
-					<span><input id="origin-lat-degree" type="text" /></span>
-					<span>องศา</span>
-					<span><input id="origin-lat-minute" type="text" /></span>
-					<span>ลิปดา</span>
+				<div style="width:100%;height:50px;">
+					<p style="float:left;width:30%;height:50px;margin:0 5px;">แลตติจูด</p>
+					<div style="float:left;width:35%;">
+						<input id="origin-lat-degree" class="text-input" type="text" />
+						<input id="origin-lat-minute" class="text-input" type="text" />
+					</div>
+					<div style="float:left;width:30%;">
+						<p style="margin:5px 10px">องศา</p>
+						<p style="margin:5px 10px">ลิปดา</p>
+					</div>
 				</div>
-				<div>
-					<span>ลองจิจูด</span>
-					<span><input id="origin-lon-degree" type="text" /></span>
-					<span>องศา</span>
-					<span><input id="origin-lon-minute" type="text" /></span>
-					<span>ลิปดา</span>
+				<div style="width:100%;height:50px;margin-top:20px;">
+					<p style="float:left;width:30%;height:50px;margin:0 5px;">ลองจิจูด</p>
+					<div style="float:left;width:35%;">
+						<input id="origin-lon-degree" class="text-input" type="text" />
+						<input id="origin-lon-minute" class="text-input" type="text" />
+					</div>
+					<div style="float:left;width:30%;">
+						<p style="margin:5px 10px">องศา</p>
+						<p style="margin:5px 10px">ลิปดา</p>
+					</div>
 				</div>
-			</span>
-			<span class="container">
+			</div>
+			<div class="container">
 				<h4>จุด Grid</h4>
-				<div>
-					<span>แลตติจูด</span>
-					<span><input id="grid-lat-degree" type="text" /></span>
-					<span>องศา</span>
-					<span><input id="grid-lat-minute" type="text" /></span>
-					<span>ลิปดา</span>
+				<div style="width:100%;height:50px;">
+					<p style="float:left;width:30%;height:50px;margin:0 5px;">แลตติจูด</p>
+					<div style="float:left;width:35%;">
+						<input id="grid-lat-degree" class="text-input" type="text" />
+						<input id="grid-lat-minute" class="text-input" type="text" />
+					</div>
+					<div style="float:left;width:30%;">
+						<p style="margin:5px 10px">องศา</p>
+						<p style="margin:5px 10px">ลิปดา</p>
+					</div>
 				</div>
-				<div>
-					<span>ลองจิจูด</span>
-					<span><input id="grid-lon-degree" type="text" /></span>
-					<span>องศา</span>
-					<span><input id="grid-lon-minute" type="text" /></span>
-					<span>ลิปดา</span>
+				<div style="width:100%;height:50px;margin-top:20px;">
+					<p style="float:left;width:30%;height:50px;margin:0 5px;">ลองจิจูด</p>
+					<div style="float:left;width:35%;">
+						<input id="grid-lon-degree" class="text-input" type="text" />
+						<input id="grid-lon-minute" class="text-input" type="text" />
+					</div>
+					<div style="float:left;width:30%;">
+						<p style="margin:5px 10px">องศา</p>
+						<p style="margin:5px 10px">ลิปดา</p>
+					</div>
 				</div>
-			</span>
+			</div>
 		</div>
 		<div class="main-container">
-			<span class="container">
+			<div class="container">
 				<h4>แบริ่ง ระยะ</h4>
-				<div>
-					<span>แบริ่ง</span>
-					<span><input id="bearing" type="text" /></span>
+				<div style="width:100%;height:30px;margin-top:20px;">
+					<p style="float:left;width:30%;height:50px;margin:0 5px;">แบริ่ง</p>
+					<div style="float:left;width:35%;">
+						<input id="bearing" class="text-input" type="text" />
+					</div>
 				</div>
-				<div>
-					<span>ระยะ</span>
-					<span><input id="range" type="text" /></span>
-					<span>ไมล์</span>
+				<div style="width:100%;height:30px;margin-top:20px;">
+					<p style="float:left;width:30%;height:50px;margin:0 5px;">ระยะ</p>
+					<div style="float:left;width:35%;">
+						<input id="distance" class="text-input" type="text" />
+					</div>
+					<div style="float:left;width:30%;">
+						<p style="margin:5px 10px">ไมล์</p>
+					</div>
 				</div>
-			</span>
-			<span class="container">
+			</div>
+			<div class="container">
 				<h4>ตำบลที่</h4>
-				<label id="section"></label>
-				<label id="x-axis"></label>
-				<label id="y-axis"></label>
-			</span>
+				<p id="sector">Sector : </p>
+				<p id="x-axis">X-Axis : </p>
+				<p id="y-axis">Y-Axis : </p>
+			</div>
+		</div>
+		<div class="main-container">
+			<input id="submit" class="button-input" type="button" value="คำนวน" onclick="calculate()" />
 		</div>
 	</body>
 </html>
